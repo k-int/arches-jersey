@@ -51,8 +51,10 @@
 
             </div>
 
-            <h3>Artefact Description</h3>
-            <p>{{ resource_data|val_from_key:"Description"|val_from_key:"Artefact Description"|val_from_key:"@display_value"|safe }}</p>
+            <div class="keeptogether">
+               <h3>Artefact Description</h3>
+               <div class="description">{{ resource_data|val_from_key:"Description"|val_from_key:"Artefact Description"|val_from_key:"@display_value"|safe }}</div>
+            </div>
 
             <div class="content-row">
                <div class="keeptogether">
@@ -155,7 +157,7 @@
             
             <div class="keeptogether">
                <h3>General notes</h3>
-               <p>{{ resource_data|val_from_key:"Notes"|val_from_key:"Artefact Notes"|val_from_key:"@display_value" }}</p>
+               <div class="description">{{ resource_data|val_from_key:"Notes"|val_from_key:"Artefact Notes"|val_from_key:"@display_value" }}</div>
             </div>
 
             <div class="keeptogether">
