@@ -7,14 +7,11 @@ from arches.app.views.main import index
 from jersey_her.views.index_je import index_je
 from jersey_her.views.cookie_policy import CookiePolicy
 
-from .views.html_export_find import html_export_find
-
 urlpatterns = [
     re_path(r"^en$", index, name="home_english"),
     re_path(r"^je$", index_je, name="home_jerrais"),
     re_path(r"^cookie_policy", CookiePolicy.as_view(), name="cookie_policy"),
     path("", include("arches_pdf_exporting.urls")),
-    re_path(r"^html_export_find$", html_export_find, name="html_export_find"),
 ]
 
 # Ensure Arches core urls are superseded by project-level urls
