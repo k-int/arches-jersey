@@ -45,14 +45,18 @@
 
                {% with urls=resource_data|val_from_key:"Images"|val_from_key:"file_details" %}
                   {% for url in urls %}
+                  <div class="img-container">
                      <img class="find-image" src="https://her-test.jerseyheritage.org/{{ url|val_from_key:"url" }}">
+                  </div>
                   {% endfor %}
                {% endwith %} 
 
             </div>
 
-            <h3>Artefact Description</h3>
-            <p>{{ resource_data|val_from_key:"Description"|val_from_key:"Artefact Description"|val_from_key:"@display_value"|safe }}</p>
+            <div class="keeptogether">
+               <h3>Artefact Description</h3>
+               <div class="description">{{ resource_data|val_from_key:"Description"|val_from_key:"Artefact Description"|val_from_key:"@display_value"|safe }}</div>
+            </div>
 
             <div class="content-row">
                <div class="keeptogether">
@@ -153,11 +157,6 @@
                <p>{{ resource_data|val_from_key:"Inscription"|val_from_key:'Subsequent Action'|val_from_key:"@display_value" }}</p>
             </div>
             
-            <div class="keeptogether">
-               <h3>General notes</h3>
-               <p>{{ resource_data|val_from_key:"Notes"|val_from_key:"Artefact Notes"|val_from_key:"@display_value" }}</p>
-            </div>
-
             <div class="keeptogether">
                <h3>Identified By</h3>
                <p>{{ resource_data|val_from_key:"Discovery"|val_from_key:"Discovery Event"|val_from_key:"Identifier"|val_from_key:"Identifier Names"|val_from_key:"Identifier Name"|val_from_key:"@display_value" }}</p>
