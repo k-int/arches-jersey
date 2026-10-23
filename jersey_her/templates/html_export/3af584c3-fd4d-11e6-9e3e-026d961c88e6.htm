@@ -45,7 +45,9 @@
 
                {% with urls=resource_data|val_from_key:"Images"|val_from_key:"file_details" %}
                   {% for url in urls %}
+                  <div class="img-container">
                      <img class="find-image" src="https://her-test.jerseyheritage.org/{{ url|val_from_key:"url" }}">
+                  </div>
                   {% endfor %}
                {% endwith %} 
 
